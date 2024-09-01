@@ -1,0 +1,27 @@
+﻿
+@model List<User>
+
+<a href="User/Create">Create</a>
+<a href="User/Active">ActivateUser</a>
+<a href="User/UnActive">DisableUser</a>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">IsActive</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+        @foreach(var item in Model)
+        {
+            <tr>
+                <th scope="row">@item.Id</th>
+                <td>@item.Name</td>
+                <td>@item.IsActive</td>
+            </tr>
+            
+        }   
+    </tbody>
+</table>
